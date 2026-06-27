@@ -1,0 +1,19 @@
+/* Color Palette */
+:root {
+  --color-primary: #D0BFA8;
+  --color-secondary: #AA8C8C;
+  --color-accent-1: #030303;
+  --color-accent-2: #7B1612;
+
+  --font-heading: "Calisto MT", "Bookman Old Style", Georgia, serif;
+  --font-body: Cambria, Georgia, serif;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+body, p {
+  font-family: var(--font-body);
+}
