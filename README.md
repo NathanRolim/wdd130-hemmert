@@ -3,7 +3,7 @@
 
 A Dungeons & Dragons character stats organizer.
 
-**Live site:** https://nathanrolim.github.io/wdd130-hemmert/
+**Live site:** https://nathanrolim.github.io/wdd130-hemmert/index.html
 <!-- Replace with your actual GitHub Pages URL after publishing -->
 
 ## Project
