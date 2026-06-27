@@ -4,29 +4,76 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Stat Vault | Home</title>
-  <meta name="description" content="Stat Vault - a D&D character stats organizer. Client: Miles Hemmert.">
+  <meta name="description" content="Stat Vault - a D&D stats organizer that keeps presets, stat blocks, and encounter tables in one place for Game Masters.">
   <meta name="author" content="Miles Hemmert">
   <link rel="stylesheet" href="styles/stat-vault.css">
 </head>
 <body>
-  <header>
-    <p>Stat Vault</p>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="page2.html">Page 2</a>
-      <a href="page3.html">Page 3</a>
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <img src="images/stat-vault-logo.png" alt="Stat Vault logo" class="brand-logo">
+      <span class="brand-name">Stat Vault</span>
+    </a>
+    <nav class="site-nav">
+      <a href="index.html" class="active">Home</a>
+      <a href="page2.html">Presets &amp; Dice</a>
+      <a href="page3.html">Builder</a>
     </nav>
   </header>
 
   <main>
-    <h1>Stat Vault</h1>
-    <p>Client: Miles Hemmert</p>
-    <p>Site under construction by Team 2.</p>
+    <!-- HERO -->
+    <section class="hero">
+      <h1>Stat Vault</h1>
+      <p class="tagline">Every stat, preset, and encounter table in one place, so you can run the session instead of hunting through tabs.</p>
+      <a href="page2.html" class="btn">Browse Presets</a>
+    </section>
+
+    <!-- PROPOSITO -->
+    <section class="panel">
+      <h2>What it's for</h2>
+      <p>
+        Stat Vault organizes the information a Game Master needs during a Dungeons &amp; Dragons
+        session (and similar tabletop games) into one tool. Instead of juggling five browser tabs,
+        three bookmarks, and a character sheet, you keep your stat blocks, dice presets, and
+        encounter tables saved and ready to pull up at the table.
+      </p>
+    </section>
+
+    <!-- EXEMPLOS -->
+    <section class="panel">
+      <h2>A few examples</h2>
+      <div class="card-grid">
+        <article class="card">
+          <h3>Saved stat blocks</h3>
+          <p>Store a monster's AC, HP, attacks, and abilities once, then load it the moment it enters the fight.</p>
+        </article>
+        <article class="card">
+          <h3>Dice presets</h3>
+          <p>Save the rolls you reuse (random loot, wild magic, weather) and roll them against a table in one click.</p>
+        </article>
+        <article class="card">
+          <h3>Encounter tables</h3>
+          <p>Group several stat blocks into a single encounter so the whole fight is ready before the party walks in.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- TUTORIAL -->
+    <section class="panel">
+      <h2>Quick start</h2>
+      <ol class="tutorial">
+        <li><strong>Create a preset.</strong> Add a stat block or a dice table and give it a name you'll recognize mid-session.</li>
+        <li><strong>Save it to your catalog.</strong> Everything you save lives on the Presets &amp; Dice page, ready to search.</li>
+        <li><strong>Build an encounter.</strong> Pull saved blocks together into an encounter table on the Builder page.</li>
+        <li><strong>Run your session.</strong> Open Stat Vault at the table and load what you need, when you need it.</li>
+      </ol>
+    </section>
   </main>
 
-  <footer>
+  <footer class="site-footer">
     <p>&copy; 2026 Miles Hemmert</p>
-    <p>Developed by Nathan Rolim (Lead Developer)</p>
+    <p>Developed by Nathan Rolim (Lead Developer) &middot; Team 2 &middot; WDD 130</p>
   </footer>
 </body>
 </html>
