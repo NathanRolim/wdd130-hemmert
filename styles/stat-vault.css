@@ -1,19 +1,185 @@
-/* Color Palette */
+/* Stat Vault — style guide from Miles Hemmert's site plan
+   Palette: Primary #D0BFA8 (cream), Secondary #AA8C8C (mauve),
+   Accent 1 #030303 (black), Accent 2 #7B1612 (dark red)
+   Fonts: Calisto MT (headings) / Cambria (body), with serif fallbacks. */
+
 :root {
-  --color-primary: #D0BFA8;
-  --color-secondary: #AA8C8C;
-  --color-accent-1: #030303;
-  --color-accent-2: #7B1612;
+  --cream: #D0BFA8;
+  --mauve: #AA8C8C;
+  --black: #030303;
+  --red: #7B1612;
+  --red-bright: #a8261f;     /* brightened red for hover/contrast on dark */
+  --bg: #0a0a0a;
+  --surface: #161210;        /* warm dark for cards/panels */
+  --border: #2a2320;
 
-  --font-heading: "Calisto MT", "Bookman Old Style", Georgia, serif;
-  --font-body: Cambria, Georgia, serif;
+  --font-heading: 'Calisto MT', Georgia, 'Times New Roman', serif;
+  --font-body: Cambria, Georgia, 'Times New Roman', serif;
 }
 
-/* Typography */
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-heading);
-}
+* { box-sizing: border-box; }
 
-body, p {
+body {
+  margin: 0;
+  background-color: var(--bg);
+  color: var(--cream);
   font-family: var(--font-body);
+  line-height: 1.6;
 }
+
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  color: var(--cream);
+  line-height: 1.2;
+}
+
+/* HEADER */
+.site-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  background-color: var(--black);
+  border-bottom: 2px solid var(--red);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  color: var(--cream);
+}
+
+.brand-logo { height: 48px; width: auto; }
+
+.brand-name {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  letter-spacing: 0.05em;
+}
+
+.site-nav { display: flex; gap: 1.25rem; }
+
+.site-nav a {
+  color: var(--cream);
+  text-decoration: none;
+  padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
+}
+
+.site-nav a:hover,
+.site-nav a.active { border-bottom-color: var(--red-bright); }
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 4rem 1.5rem;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.hero h1 { font-size: 3rem; margin: 0 0 0.5rem; }
+
+.tagline {
+  font-size: 1.2rem;
+  color: var(--mauve);
+  margin: 0 auto 2rem;
+  max-width: 600px;
+}
+
+/* BUTTON */
+.btn {
+  display: inline-block;
+  background-color: var(--red);
+  color: var(--cream);
+  text-decoration: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 4px;
+  font-family: var(--font-heading);
+  letter-spacing: 0.03em;
+}
+
+.btn:hover { background-color: var(--red-bright); }
+
+/* PANELS */
+.panel {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+.panel h2 {
+  font-size: 1.8rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.5rem;
+}
+
+/* EXAMPLE CARDS */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.card {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--red);
+  border-radius: 4px;
+  padding: 1.25rem;
+}
+
+.card h3 { margin-top: 0; font-size: 1.2rem; }
+.card p { color: var(--mauve); margin-bottom: 0; }
+
+/* TUTORIAL */
+.tutorial { line-height: 1.8; padding-left: 1.25rem; }
+.tutorial li { margin-bottom: 0.5rem; }
+.tutorial strong { color: var(--cream); }
+
+/* FOOTER */
+.site-footer {
+  text-align: center;
+  padding: 2rem 1.5rem;
+  margin-top: 2rem;
+  background-color: var(--black);
+  border-top: 2px solid var(--red);
+  color: var(--mauve);
+}
+
+.site-footer p { margin: 0.25rem 0; }
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .site-header { flex-direction: column; align-items: flex-start; }
+  .hero h1 { font-size: 2.2rem; }
+}
+/* Article rows (page 2 - Braxton) */
+.article {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.5rem;
+  max-width: 960px;
+  margin: 1.5rem auto;
+  padding: 1.25rem;
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--red);
+  border-radius: 4px;
+}
+
+.article img {
+  width: 220px;
+  height: auto;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.article-text { flex: 1; min-width: 240px; }
+.article-text h2 { margin-top: 0; }
+.article-text p { color: var(--mauve); margin-bottom: 0; }
